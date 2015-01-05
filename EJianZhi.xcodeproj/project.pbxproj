@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2E14681A5AAC97004F0107 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14671A5AAC97004F0107 /* CoreLocation.framework */; };
+		3B2E146A1A5AACA0004F0107 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14691A5AACA0004F0107 /* Security.framework */; };
+		3B2E146C1A5AACA6004F0107 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E146B1A5AACA6004F0107 /* CoreGraphics.framework */; };
+		3B2E146E1A5AACAF004F0107 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E146D1A5AACAF004F0107 /* MobileCoreServices.framework */; };
+		3B2E14701A5AACD2004F0107 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E146F1A5AACD2004F0107 /* CFNetwork.framework */; };
+		3B2E14721A5AACD9004F0107 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14711A5AACD9004F0107 /* CoreTelephony.framework */; };
+		3B2E14741A5AACE1004F0107 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14731A5AACE1004F0107 /* SystemConfiguration.framework */; };
+		3B2E14761A5AACEA004F0107 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14751A5AACEA004F0107 /* libz.1.2.5.dylib */; };
+		3B2E14781A5AACF3004F0107 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14771A5AACF3004F0107 /* libicucore.dylib */; };
+		3B2E147A1A5AACFD004F0107 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14791A5AACFD004F0107 /* libsqlite3.dylib */; };
+		3B2E14811A5AAFF0004F0107 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14801A5AAFF0004F0107 /* BmobSDK.framework */; };
 		3BAAEADE1A49412D00253298 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAEADD1A49412D00253298 /* main.m */; };
 		3BAAEAE11A49412D00253298 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAEAE01A49412D00253298 /* AppDelegate.m */; };
 		3BAAEAE41A49412D00253298 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAEAE31A49412D00253298 /* ViewController.m */; };
@@ -27,6 +38,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B2E14671A5AAC97004F0107 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3B2E14691A5AACA0004F0107 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3B2E146B1A5AACA6004F0107 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3B2E146D1A5AACAF004F0107 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3B2E146F1A5AACD2004F0107 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3B2E14711A5AACD9004F0107 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3B2E14731A5AACE1004F0107 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3B2E14751A5AACEA004F0107 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		3B2E14771A5AACF3004F0107 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		3B2E14791A5AACFD004F0107 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		3B2E14801A5AAFF0004F0107 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		3BAAEAD81A49412D00253298 /* EJianZhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EJianZhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAAEADC1A49412D00253298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BAAEADD1A49412D00253298 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +69,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2E147A1A5AACFD004F0107 /* libsqlite3.dylib in Frameworks */,
+				3B2E14781A5AACF3004F0107 /* libicucore.dylib in Frameworks */,
+				3B2E14761A5AACEA004F0107 /* libz.1.2.5.dylib in Frameworks */,
+				3B2E14741A5AACE1004F0107 /* SystemConfiguration.framework in Frameworks */,
+				3B2E14721A5AACD9004F0107 /* CoreTelephony.framework in Frameworks */,
+				3B2E14701A5AACD2004F0107 /* CFNetwork.framework in Frameworks */,
+				3B2E146E1A5AACAF004F0107 /* MobileCoreServices.framework in Frameworks */,
+				3B2E146C1A5AACA6004F0107 /* CoreGraphics.framework in Frameworks */,
+				3B2E146A1A5AACA0004F0107 /* Security.framework in Frameworks */,
+				3B2E14681A5AAC97004F0107 /* CoreLocation.framework in Frameworks */,
+				3B2E14811A5AAFF0004F0107 /* BmobSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,10 +93,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B2E147B1A5AAD03004F0107 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				3B2E14801A5AAFF0004F0107 /* BmobSDK.framework */,
+				3B2E14791A5AACFD004F0107 /* libsqlite3.dylib */,
+				3B2E14771A5AACF3004F0107 /* libicucore.dylib */,
+				3B2E14751A5AACEA004F0107 /* libz.1.2.5.dylib */,
+				3B2E14731A5AACE1004F0107 /* SystemConfiguration.framework */,
+				3B2E14711A5AACD9004F0107 /* CoreTelephony.framework */,
+				3B2E146F1A5AACD2004F0107 /* CFNetwork.framework */,
+				3B2E146D1A5AACAF004F0107 /* MobileCoreServices.framework */,
+				3B2E146B1A5AACA6004F0107 /* CoreGraphics.framework */,
+				3B2E14691A5AACA0004F0107 /* Security.framework */,
+				3B2E14671A5AAC97004F0107 /* CoreLocation.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		3BAAEACF1A49412D00253298 = {
 			isa = PBXGroup;
 			children = (
 				3BAAEADA1A49412D00253298 /* EJianZhi */,
+				3B2E147B1A5AAD03004F0107 /* Framework */,
 				3BAAEAF41A49412D00253298 /* EJianZhiTests */,
 				3BAAEAD91A49412D00253298 /* Products */,
 			);
@@ -343,6 +395,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EJianZhi",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EJianZhi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +410,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EJianZhi",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = EJianZhi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +474,7 @@
 				3BAAEAFD1A49412D00253298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BAAEAFE1A49412D00253298 /* Build configuration list for PBXNativeTarget "EJianZhiTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +483,7 @@
 				3BAAEB001A49412D00253298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
