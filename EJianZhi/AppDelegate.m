@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <BmobSDK/Bmob.h>
+#import <ShareSDK/ShareSDK.h>
 
 @interface AppDelegate ()
 
@@ -20,7 +21,22 @@
     
     [Bmob registerWithAppKey:@"0c7866e7c8597793cd62c72f6ca52649"];
     
+    //for ShareSDK
+//    [ShareSDK registerApp:@"50de98338b9f"];
+//    [ShareSDK connectSinaWeiboWithAppKey:@"568898243"
+//                               appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
+//                             redirectUri:@"http://www.sharesdk.cn"];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url wxDelegate:nil];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url sourceApplication:sourceApplication annotation:annotation wxDelegate:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

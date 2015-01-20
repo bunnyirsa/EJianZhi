@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <ShareSDK/ShareSDK.h>
 
 @interface ViewController ()
 
@@ -18,6 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)click:(id)sender {
+    //第三方微博登陆
+    [ShareSDK getUserInfoWithType:ShareTypeSinaWeibo
+                      authOptions:nil
+                           result:^(BOOL result, id<ISSPlatformUser> userInfo, id<ICMErrorInfo> error) {
+                               
+                               if (result)
+                               {
+                                   NSLog(@"uid = %@",[userInfo uid]);
+                                   NSLog(@"name = %@",[userInfo nickname]);
+                                   NSLog(@"icon = %@",[userInfo profileImage]);
+                               }
+                               
+                           }
+     ];
 }
 
 - (void)didReceiveMemoryWarning {
