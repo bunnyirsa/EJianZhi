@@ -11,6 +11,7 @@
 #import "MLSecondVC.h"
 #import "MLThirdVC.h"
 #import "MLForthVC.h"
+#import "ChatMessageViewController.h"
 
 #define KEY_WINDOW  [[UIApplication sharedApplication]keyWindow]
 #define MainScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -47,7 +48,7 @@ static CGFloat min_distance = 100;// 最小回弹距离
     }
     
     if ([self.restorationIdentifier isEqualToString:@"thirdNavi"]) {
-       MLThirdVC *thirdVC=[[MLThirdVC alloc]init];
+       ChatMessageViewController *thirdVC=[[ChatMessageViewController alloc]init];
         [self pushViewController:thirdVC animated:NO];
     }
     
