@@ -296,26 +296,26 @@
                             <exclude reference="TTu-gu-REA"/>
                             <exclude reference="nfn-tb-iLO"/>
                             <exclude reference="tUG-Vb-GRH"/>
+                            <exclude reference="Fxp-kC-L2Y"/>
+                            <exclude reference="hJA-sR-9NE"/>
                             <exclude reference="6Qp-C7-1pL"/>
                             <exclude reference="hG1-bC-SYc"/>
                             <exclude reference="YBE-SV-KhI"/>
                             <exclude reference="jbG-YO-teL"/>
-                            <exclude reference="Fxp-kC-L2Y"/>
-                            <exclude reference="hJA-sR-9NE"/>
                             <exclude reference="chb-cu-jyd"/>
                             <exclude reference="oEq-j2-z9Q"/>
-                            <exclude reference="Rpw-md-O3a"/>
-                            <exclude reference="TWA-uQ-Zwy"/>
                             <exclude reference="RPj-g3-sAX"/>
                             <exclude reference="vq4-RG-dt2"/>
+                            <exclude reference="Rpw-md-O3a"/>
+                            <exclude reference="TWA-uQ-Zwy"/>
                             <exclude reference="U5g-ee-zZL"/>
                             <exclude reference="aNa-6U-RRO"/>
                             <exclude reference="pj5-dC-PEY"/>
+                            <exclude reference="usb-yY-Ddc"/>
+                            <exclude reference="vT3-xM-FLs"/>
                             <exclude reference="Y5F-ma-W1z"/>
                             <exclude reference="dkd-bI-V5R"/>
                             <exclude reference="qP3-ma-1mL"/>
-                            <exclude reference="usb-yY-Ddc"/>
-                            <exclude reference="vT3-xM-FLs"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -324,26 +324,26 @@
                             <include reference="TTu-gu-REA"/>
                             <include reference="nfn-tb-iLO"/>
                             <include reference="tUG-Vb-GRH"/>
+                            <include reference="Fxp-kC-L2Y"/>
+                            <include reference="hJA-sR-9NE"/>
                             <include reference="6Qp-C7-1pL"/>
                             <include reference="hG1-bC-SYc"/>
                             <include reference="YBE-SV-KhI"/>
                             <include reference="jbG-YO-teL"/>
-                            <include reference="Fxp-kC-L2Y"/>
-                            <include reference="hJA-sR-9NE"/>
                             <include reference="chb-cu-jyd"/>
                             <include reference="oEq-j2-z9Q"/>
-                            <include reference="Rpw-md-O3a"/>
-                            <include reference="TWA-uQ-Zwy"/>
                             <include reference="RPj-g3-sAX"/>
                             <include reference="vq4-RG-dt2"/>
+                            <include reference="Rpw-md-O3a"/>
+                            <include reference="TWA-uQ-Zwy"/>
                             <include reference="U5g-ee-zZL"/>
                             <include reference="aNa-6U-RRO"/>
                             <include reference="pj5-dC-PEY"/>
+                            <include reference="usb-yY-Ddc"/>
+                            <include reference="vT3-xM-FLs"/>
                             <include reference="Y5F-ma-W1z"/>
                             <include reference="dkd-bI-V5R"/>
                             <include reference="qP3-ma-1mL"/>
-                            <include reference="usb-yY-Ddc"/>
-                            <include reference="vT3-xM-FLs"/>
                         </mask>
                     </variation>
                 </view>
