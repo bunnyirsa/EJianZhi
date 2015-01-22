@@ -486,7 +486,7 @@
                     <include reference="e6o-KB-0oj"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="179" y="390"/>
+            <point key="canvasLocation" x="173" y="353"/>
         </view>
     </objects>
     <resources>
