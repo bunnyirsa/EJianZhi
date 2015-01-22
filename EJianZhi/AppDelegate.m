@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <BmobSDK/Bmob.h>
 #import <ShareSDK/ShareSDK.h>
+#import "SMS_SDK/SMS_SDK.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,10 @@
 //    [ShareSDK connectSinaWeiboWithAppKey:@"568898243"
 //                               appSecret:@"38a4f8204cc784f81f9f0daaf31e02e3"
 //                             redirectUri:@"http://www.sharesdk.cn"];
+    
+    //短信验证模块
+    [SMS_SDK registerApp:@"56454b8585da" withSecret:@"17e36cd8f741167baa78e940456c238c"];
+
     return YES;
 }
 

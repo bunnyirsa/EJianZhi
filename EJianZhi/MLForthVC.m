@@ -7,8 +7,14 @@
 //
 
 #import "MLForthVC.h"
+#import <BmobSDK/Bmob.h>
+#import "SRLoginVC.h"
 
-@interface MLForthVC ()
+@interface MLForthVC ()<finishLogin,UIAlertViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *buttonLabel;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 @end
 
@@ -16,8 +22,78 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden=YES;
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    if ([BmobUser getCurrentObject]!=nil) {
+        [self finishLogin];
+    }
+    else {
+        [self finishLogout];
+    }
+}
+
+- (IBAction)login:(id)sender {
+    
+    if ([BmobUser getCurrentUser]==nil){
+        SRLoginVC *loginVC=[SRLoginVC shareLoginVC];
+        loginVC.finishLoginDelegate=self;
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }
+}
+
+- (IBAction)logout:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确定退出账户？" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:@"取消",nil];
+    alert.delegate=self;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex==0) {
+        
+        BOOL isLogout=[SRLoginBusiness logOut];
+        if (isLogout) {
+            [self finishLogout];
+        }
+    }
+}
+
+- (void)finishLogout{
+    
+    self.buttonLabel.text=[NSString stringWithFormat:@"点击登录"];
+    
+    self.logoutButton.hidden=YES;
+    //动态绑定LoginButton响应函数
+    self.logoutButton.tag=10000;
+    
+    self.bottomConstraint.constant=-60;
+}
+
+- (void)finishLogin{
+    
+    NSUserDefaults *mySettingData = [NSUserDefaults standardUserDefaults];
+    
+    self.buttonLabel.text=[NSString stringWithFormat:@"%@",[mySettingData objectForKey:@"currentUserName"]];
+    
+    self.logoutButton.hidden=NO;
+    //动态绑定LoginButton响应函数
+    self.logoutButton.tag=20000;
+    
+    self.bottomConstraint.constant=0;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
