@@ -200,8 +200,6 @@
 		045024301A6EAEDE00A0CB4C /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0450242F1A6EAEDE00A0CB4C /* libresolv.dylib */; };
 		045024321A6EAEE600A0CB4C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 045024311A6EAEE600A0CB4C /* libxml2.dylib */; };
 		045024341A6EAEF400A0CB4C /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 045024331A6EAEF400A0CB4C /* libiconv.dylib */; };
-		04BF486A1A6E8A5700F2B212 /* ChatMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF48681A6E8A5700F2B212 /* ChatMessageViewController.m */; };
-		04BF486B1A6E8A5700F2B212 /* ChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BF48691A6E8A5700F2B212 /* ChatMessageViewController.xib */; };
 		04BF493E1A6E8F4E00F2B212 /* bar_09.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BF48BF1A6E8F4E00F2B212 /* bar_09.png */; };
 		04BF493F1A6E8F4E00F2B212 /* bar_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BF48C01A6E8F4E00F2B212 /* bar_05.png */; };
 		04BF49401A6E8F4E00F2B212 /* bar_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BF48C11A6E8F4E00F2B212 /* bar_03.png */; };
@@ -332,6 +330,10 @@
 		04BF49BE1A6E8F8400F2B212 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF49BD1A6E8F8400F2B212 /* SDWebImage.framework */; };
 		04BF49C01A6E8FAA00F2B212 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF49BF1A6E8FAA00F2B212 /* MapKit.framework */; };
 		04BF49C41A6E8FC800F2B212 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF49C31A6E8FC800F2B212 /* CoreText.framework */; };
+		04C4B2E41A709BAE00E82F29 /* ChatMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4B2E21A709BAE00E82F29 /* ChatMessageViewController.m */; };
+		04C4B2E51A709BAE00E82F29 /* ChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C4B2E31A709BAE00E82F29 /* ChatMessageViewController.xib */; };
+		04C4B2E91A709BC000E82F29 /* ChatMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C4B2E71A709BC000E82F29 /* ChatMessageViewController.m */; };
+		04C4B2EA1A709BC000E82F29 /* ChatMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C4B2E81A709BC000E82F29 /* ChatMessageViewController.xib */; };
 		3B2E14681A5AAC97004F0107 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14671A5AAC97004F0107 /* CoreLocation.framework */; };
 		3B2E146A1A5AACA0004F0107 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E14691A5AACA0004F0107 /* Security.framework */; };
 		3B2E146C1A5AACA6004F0107 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B2E146B1A5AACA6004F0107 /* CoreGraphics.framework */; };
@@ -822,9 +824,6 @@
 		0450242F1A6EAEDE00A0CB4C /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		045024311A6EAEE600A0CB4C /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		045024331A6EAEF400A0CB4C /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
-		04BF48671A6E8A5700F2B212 /* ChatMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageViewController.h; sourceTree = "<group>"; };
-		04BF48681A6E8A5700F2B212 /* ChatMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageViewController.m; sourceTree = "<group>"; };
-		04BF48691A6E8A5700F2B212 /* ChatMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMessageViewController.xib; sourceTree = "<group>"; };
 		04BF48BF1A6E8F4E00F2B212 /* bar_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_09.png; sourceTree = "<group>"; };
 		04BF48C01A6E8F4E00F2B212 /* bar_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_05.png; sourceTree = "<group>"; };
 		04BF48C11A6E8F4E00F2B212 /* bar_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_03.png; sourceTree = "<group>"; };
@@ -956,6 +955,12 @@
 		04BF49BF1A6E8FAA00F2B212 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapKit.framework; sourceTree = "<group>"; };
 		04BF49C31A6E8FC800F2B212 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreText.framework; sourceTree = "<group>"; };
 		04BF4BB61A6E991D00F2B212 /* EjianZHi_prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EjianZHi_prefix.pch; sourceTree = "<group>"; };
+		04C4B2E11A709BAE00E82F29 /* ChatMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageViewController.h; sourceTree = "<group>"; };
+		04C4B2E21A709BAE00E82F29 /* ChatMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageViewController.m; sourceTree = "<group>"; };
+		04C4B2E31A709BAE00E82F29 /* ChatMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMessageViewController.xib; sourceTree = "<group>"; };
+		04C4B2E61A709BC000E82F29 /* ChatMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessageViewController.h; sourceTree = "<group>"; };
+		04C4B2E71A709BC000E82F29 /* ChatMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessageViewController.m; sourceTree = "<group>"; };
+		04C4B2E81A709BC000E82F29 /* ChatMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatMessageViewController.xib; sourceTree = "<group>"; };
 		3B2E14671A5AAC97004F0107 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3B2E14691A5AACA0004F0107 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3B2E146B1A5AACA6004F0107 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -1738,9 +1743,12 @@
 		04BF486C1A6E8A5900F2B212 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				04BF48671A6E8A5700F2B212 /* ChatMessageViewController.h */,
-				04BF48681A6E8A5700F2B212 /* ChatMessageViewController.m */,
-				04BF48691A6E8A5700F2B212 /* ChatMessageViewController.xib */,
+				04C4B2E61A709BC000E82F29 /* ChatMessageViewController.h */,
+				04C4B2E71A709BC000E82F29 /* ChatMessageViewController.m */,
+				04C4B2E81A709BC000E82F29 /* ChatMessageViewController.xib */,
+				04C4B2E11A709BAE00E82F29 /* ChatMessageViewController.h */,
+				04C4B2E21A709BAE00E82F29 /* ChatMessageViewController.m */,
+				04C4B2E31A709BAE00E82F29 /* ChatMessageViewController.xib */,
 			);
 			name = MainVC;
 			sourceTree = "<group>";
@@ -2332,6 +2340,8 @@
 				04BF495E1A6E8F4E00F2B212 /* VoiceSearchFeedback009@2x.png in Resources */,
 				04BF49951A6E8F4E00F2B212 /* chat_sender_audio_playing_000@2x.png in Resources */,
 				04263C9A1A6F5897002F8F4A /* chatBar_faceSelected@2x.png in Resources */,
+				04C4B2EA1A709BC000E82F29 /* ChatMessageViewController.xib in Resources */,
+				04C4B2E51A709BAE00E82F29 /* ChatMessageViewController.xib in Resources */,
 				04BF49471A6E8F4E00F2B212 /* chatFire_audioPlaying1.png in Resources */,
 				04BF49571A6E8F4E00F2B212 /* VoiceSearchFeedback006.png in Resources */,
 				3BCBBD4C1A6D35C500E581FD /* MLForthVC.xib in Resources */,
@@ -2389,7 +2399,6 @@
 				04BF49461A6E8F4E00F2B212 /* chatFire_audioPlaying0@2x.png in Resources */,
 				3B5FBB501A6DF465009DA06B /* about_us.png in Resources */,
 				04263CF71A6F58AC002F8F4A /* group_participant_add@2x.png in Resources */,
-				04BF486B1A6E8A5700F2B212 /* ChatMessageViewController.xib in Resources */,
 				04263CCA1A6F5897002F8F4A /* messageSendFail@2x.png in Resources */,
 				04BF49451A6E8F4E00F2B212 /* chatFire_audioPlaying0.png in Resources */,
 				04BF496C1A6E8F4E00F2B212 /* VoiceSearchFeedback016@2x.png in Resources */,
@@ -2471,7 +2480,6 @@
 				3BCBBD341A6D345300E581FD /* SRFirstNavi.m in Sources */,
 				04263BC11A6F5697002F8F4A /* PSTCollectionViewLayout.m in Sources */,
 				04263D511A6F95C1002F8F4A /* NSManagedObjectContext+MagicalObserving.m in Sources */,
-				04BF486A1A6E8A5700F2B212 /* ChatMessageViewController.m in Sources */,
 				04263BBC1A6F5697002F8F4A /* PSTCollectionViewCell.m in Sources */,
 				04263BB91A6F5697002F8F4A /* DACircularProgressView.m in Sources */,
 				04263C241A6F5853002F8F4A /* AddFriendCell.m in Sources */,
@@ -2503,6 +2511,8 @@
 				04263BFE1A6F56CF002F8F4A /* SRSlimeView.m in Sources */,
 				04263B8F1A6F562F002F8F4A /* UIViewController+DismissKeyboard.m in Sources */,
 				04263CC81A6F5897002F8F4A /* EMChatViewBaseCell.m in Sources */,
+				04C4B2E41A709BAE00E82F29 /* ChatMessageViewController.m in Sources */,
+				04C4B2E91A709BC000E82F29 /* ChatMessageViewController.m in Sources */,
 				3BAAEAE11A49412D00253298 /* AppDelegate.m in Sources */,
 				04263BDE1A6F56C4002F8F4A /* MWPhotoBrowser.m in Sources */,
 				04263BDB1A6F56C4002F8F4A /* MWGridCell.m in Sources */,
