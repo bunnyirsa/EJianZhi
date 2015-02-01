@@ -116,7 +116,7 @@
             
             [NSThread detachNewThreadSelector:@selector(initTimer) toTarget:self withObject:nil];
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"验证码已发送" message:Register.feedback delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"验证码已发送" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alert show];
         }
         else if(0==state)
@@ -135,7 +135,6 @@
             [alert show];
         }
     }];
-    
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification{

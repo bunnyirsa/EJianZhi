@@ -28,7 +28,7 @@
 
 - (void)viewWillLayoutSubviews{
     
-    [self.tabBar setSelectedImageTintColor: [UIColor colorWithRed:0.90 green:0.39 blue:0.22 alpha:1.0]];
+    //[self.tabBar setSelectedImageTintColor: [UIColor colorWithRed:0.90 green:0.39 blue:0.22 alpha:1.0]];
 }
 
 - (void)didReceiveMemoryWarning {

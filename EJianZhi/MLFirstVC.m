@@ -7,90 +7,148 @@
 //
 
 #import "MLFirstVC.h"
+#import "SRAdvertisingView.h"
+#import "MLCell1.h"
+#import "SRScanVC.h"
 
-@interface MLFirstVC ()
+#define IOS7 [[[UIDevice currentDevice] systemVersion]floatValue]>=7
+
+@interface MLFirstVC ()<ValueClickDelegate,UITableViewDataSource,UITableViewDelegate>
 {
-    UIView *_weiguanView;
+    int cellNum;
 }
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UIView *tableHeadView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet SRAdvertisingView *blankView;
+
+
 @end
 
 @implementation MLFirstVC
+@synthesize tableHeadView=_tableHeadView;
+@synthesize tableView=_tableView;
+- (IBAction)scan:(id)sender {
+    //[self setupCamera];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.titleView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"searchBar"]];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"一键兼职" style:UIBarButtonItemStylePlain target:self action:@selector(clickFind)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(location)];
     self.navigationItem.leftBarButtonItem.tintColor=[UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"提现记录" style:UIBarButtonItemStylePlain target:self action:@selector(cashRecord)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(shareJob)];
     self.navigationItem.rightBarButtonItem.tintColor=[UIColor whiteColor];
     
-    [self initSwpieView];
-    
-    
+    [self tableViewInit];
+    [self advertisementInit];
 }
 
-- (void)initSwpieView{
+//*********************tableView********************//
+- (void)tableViewInit{
+    cellNum=10;
+    [_tableView setDelegate:self];
+    [_tableView setDataSource:self];
+    _tableView.scrollEnabled=YES;
+    [_tableHeadView setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 284+130*[[UIScreen mainScreen] bounds].size.width/320)];
+    [_tableView setTableHeaderView:_tableHeadView];
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
-    _weiguanView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
-    [self.scrollView addSubview:_weiguanView];
+    BOOL nibsRegistered = NO;
     
-    float gap=([[UIScreen mainScreen] bounds].size.width-180-16)/8;
-    
-    //存储我的围观选项
-    NSArray *arr=[NSArray arrayWithObjects:@"0",@"1",@"2",@"3",@"4", nil];
-    
-    NSInteger num=[arr count];
-    int temp=1;
-    for (int j=0; j<=2; j++) {
-        for (int i=j+1; i<=j+4; i++) {
-            if (temp<=num) {
-                UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake((2*(i-j)-1)*gap+(i-j-1)*45, 5+j*75, 45, 45)];
-                [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"weiguan_%@",[arr objectAtIndex:temp-1]]] forState:UIControlStateNormal];
-                [btn addTarget:self action:@selector(weiguan:) forControlEvents:UIControlEventTouchUpInside];
-                [_weiguanView addSubview:btn];
-                btn.tag=temp;
-                
-                UILabel *lbl=[[UILabel alloc]initWithFrame:CGRectMake(btn.center.x-30, btn.center.y+30, 60, 15)];
-                lbl.text=@"19116人在线";
-                lbl.textAlignment=NSTextAlignmentCenter;
-                lbl.font=[UIFont systemFontOfSize:9.0];
-                lbl.textColor=[UIColor darkGrayColor];
-                [_weiguanView addSubview:lbl];
-                
-                temp++;
-                
-            }else{
-                
-                UIButton *btn1=[[UIButton alloc]initWithFrame:CGRectMake((2*(i-j)-1)*gap+(i-j-1)*45, 5+j*75, 45, 45)];
-                [btn1 setImage:[UIImage imageNamed:@"tianjia"] forState:UIControlStateNormal];
-                [btn1 addTarget:self action:@selector(tianjia:) forControlEvents:UIControlEventTouchUpInside];
-                [_weiguanView addSubview:btn1];
-                btn1.tag=temp;
-                
-                UILabel *lbl=[[UILabel alloc]initWithFrame:CGRectMake(btn1.center.x-30, btn1.center.y+30, 60, 15)];
-                lbl.text=@"添加围观";
-                lbl.textAlignment=NSTextAlignmentCenter;
-                lbl.font=[UIFont systemFontOfSize:9.0];
-                lbl.textColor=[UIColor darkGrayColor];
-                [_weiguanView addSubview:lbl];
-                
-                j=999;
-                break;
-            }
-        }
+    static NSString *Cellidentifier=@"MLCell1";
+    if (!nibsRegistered) {
+        UINib *nib = [UINib nibWithNibName:@"MLCell1" bundle:nil];
+        [tableView registerNib:nib forCellReuseIdentifier:Cellidentifier];
+        nibsRegistered = YES;
     }
+    
+    MLCell1 *cell=[tableView dequeueReusableCellWithIdentifier:Cellidentifier forIndexPath:indexPath];
+    cell.accessoryType=UITableViewCellAccessoryNone;
+    
+    NSUInteger row=[indexPath row];
+    return cell;
 }
 
-- (void)cashRecord{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return cellNum;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+//改变行高
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [self performSelector:@selector(deselect) withObject:nil afterDelay:0.5f];
+}
+
+- (void)deselect
+{
+    [_tableView deselectRowAtIndexPath:[_tableView indexPathForSelectedRow] animated:YES];
+}
+
+
+- (void)location{
     
 }
 
-- (void)clickFind{
+- (void)shareJob{
     
 }
+
+//*********************Banner********************//
+-(void)advertisementInit{
+    
+
+    NSMutableArray *urlArray=[[NSMutableArray alloc]init];
+    
+    [urlArray addObject:@"http://ac-gtcxbmll.clouddn.com/7pGXzjWe0tQ0Y3gK9Ei1FzDz7m531PVvaU58ziDt.jpg"];
+    [urlArray addObject:@"http://ac-gtcxbmll.clouddn.com/7pGXzjWe0tQ0Y3gK9Ei1FzDz7m531PVvaU58ziDt.jpg"];
+    [urlArray addObject:@"http://ac-gtcxbmll.clouddn.com/7pGXzjWe0tQ0Y3gK9Ei1FzDz7m531PVvaU58ziDt.jpg"];
+
+
+    SRAdvertisingView *bannerView=[[SRAdvertisingView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 130*[[UIScreen mainScreen] bounds].size.width/320) imageArray:urlArray interval:3.0];
+    
+    bannerView.vDelegate=self;
+    [self.blankView addSubview:bannerView];
+}
+
+- (void)buttonClick:(int)vid{
+    
+}
+
+
+
+//-(void)setupCamera
+//{
+//    if(IOS7)
+//    {
+//        SRScanVC * scanVC = [[SRScanVC alloc]init];
+//        scanVC.scanDelegate=self;
+//        UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
+//        backItem.title = @"";
+//        backItem.tintColor=[UIColor whiteColor];
+//        self.navigationItem.backBarButtonItem = backItem;
+//        scanVC.hidesBottomBarWhenPushed=YES;
+//        
+//        [self.navigationController pushViewController:scanVC animated:YES];
+//        
+//    }
+//}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
